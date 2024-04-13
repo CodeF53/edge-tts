@@ -15,7 +15,7 @@ await ttsSave('hello world', './tts.mp3')
 
 // customize voice
 await tts('hello world', {
-  voice: 'es-VE-PaolaNeural', // can be any Voice.Name, Voice.ShortName, or VoiceFriendlyName
+  voice: 'es-VE-PaolaNeural', // can be any Voice.Name, Voice.ShortName, or Voice.FriendlyName
   volume: '+50%', // 50% louder
   rate: '-50%', // 50% the speed
   pitch: '-50Hz' // 50Hz lower
@@ -23,7 +23,7 @@ await tts('hello world', {
 ```
 
 Find voices to use for the `voice` param using `getVoices`
-```ts
+```js
 import { getVoices, tts } from 'edge-tts'
 
 // get list of available voices
