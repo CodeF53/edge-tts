@@ -1,7 +1,7 @@
 {
   "name": "edge-tts",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Use Microsoft Edge's online text-to-speech service from JavaScript WITHOUT needing Microsoft Edge or Windows or an API key",
   "author": "f53",
   "license": "CC BY-NC-SA 4.0",

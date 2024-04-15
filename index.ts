@@ -33,14 +33,14 @@ function uuid() {
   return crypto.randomUUID().replaceAll('-', '')
 }
 
-type options = Partial<{
+export type TtsOptions = Partial<{
   voice: string,
   volume: string,
   rate: string,
   pitch: string
 }>
 
-export function tts(text: string, options: options = {}): Promise<Buffer> {
+export function tts(text: string, options: TtsOptions = {}): Promise<Buffer> {
   const { voice = 'en-GB-SoniaNeural', volume = '+0%', rate = '+0%', pitch = '+0Hz' } = options
 
   return new Promise<Buffer>((resolve, reject) => {
@@ -88,6 +88,6 @@ export function tts(text: string, options: options = {}): Promise<Buffer> {
   })
 }
 
-export async function ttsSave(text: string, file: fs.PathOrFileDescriptor, options: options = {}) {
+export async function ttsSave(text: string, file: fs.PathOrFileDescriptor, options: TtsOptions = {}) {
   fs.writeFileSync(file, await tts(text, options))
 }
